@@ -6,24 +6,24 @@ const tasks = ['take out the trash', 'go for a walk'];
 class List extends Component {
   render() {
     return <ol>
-             {tasks.map((task, index) => <li key={index}>{task}</li>)}
+             {this.props.tasks.map((task, index) => <li key={index}>{task}</li>)}
            </ol>;
   }
 }
 
 class Title extends Component {
   render() {
-    return <h1> Task List </h1>;
+    return <h1>{this.props.title}</h1>;
   }
 }
 
 class Main extends Component {
   render() {
     return <div>
-             <Title />
-             <List />
-             <List />
-             <List />
+             <Title title={'TODOS'}/>
+             <List tasks={['Mow the lawn', 'Walk the dog']}/>
+             <List tasks={['Haircut', 'Vacuum']}/>
+             <List tasks={['DMV', 'Check the pool']}/>
            </div>;
   }
 }
