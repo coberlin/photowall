@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Photo extends Component {
-	render() {
-		const post = this.props.post;
+function Photo(props) {
+		const post = props.post;
 		return <figure>
 						 <img className= "photo" src={post.imageLink} alt={post.description} />
 						 <figcaption> <p> {post.description} </p> </figcaption>
@@ -10,7 +9,6 @@ class Photo extends Component {
 						   <button className = "remove-button"> Remove </button>
 					   </div>
 		       </figure>
-	}
 }
 
 export default Photo;
