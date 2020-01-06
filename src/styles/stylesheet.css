@@ -80,9 +80,9 @@ body {
  margin: 0;
 }
 .photo {
- width: calc(100% + 4rem);
+ width: calc(100% - 4rem);
  margin-left: -2rem;
- margin-top: -2rem;
+ margin-top: 2rem;
  max-width: none;
 }
 .comment{
